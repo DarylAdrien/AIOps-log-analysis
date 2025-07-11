@@ -6,6 +6,14 @@ This project is a simple yet effective web application designed to demonstrate t
 
 The application serves as a foundational example of how AI/ML can be integrated into operational workflows to enhance monitoring, reduce manual effort, and enable proactive problem-solving.
 
+![image-1](images/ui1.png)
+
+![image-2](images/ui2.png)
+
+![image-3](images/ui3.png)
+
+![image-4](images/ui4.png)
+
 ## 🤖 AIOps Focus
 
 At its heart, this application embodies the "Observe" and "Engage" pillars of AIOps:

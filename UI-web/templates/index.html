@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIOps Log Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AIOps Log Anomaly Detection</h1>
+        <p>Upload your system log file to detect anomalies and receive an alert via email.</p>
+
+        <form id="logAnalysisForm" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="logFile">Upload Log File:</label>
+                <input type="file" id="logFile" name="logFile" accept=".txt,.log" required>
+            </div>
+            <div class="form-group">
+                <label for="userEmail">Your Email Address:</label>
+                <input type="email" id="userEmail" name="userEmail" placeholder="e.g., yourname@example.com" required>
+            </div>
+            <button type="submit" class="btn">Analyze Logs & Send Report</button>
+        </form>
+
+        <div id="statusMessage" class="status-message"></div>
+
+        <div id="results" class="results-section" style="display: none;">
+            <div id="anomalyDetectionStatus" style="display: none;"></div>
+
+            <h3>Detected Anomalies:</h3>
+            <div class="table-container">
+                <table id="anomaliesTable">
+                    <thead>
+                        <tr>
+                            <th>Timestamp</th>
+                            <th>Level</th>
+                            <th>Message</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </div>
+            <p id="noAnomaliesMessage" style="display: none;"></p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
